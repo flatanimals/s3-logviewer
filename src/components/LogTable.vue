@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(row,r) in rows" :key="r" @click="handleRowClick(r)">
+      <tr v-for="(row,r) in rows" :key="r">
         <th>{{r+1}}</th>
         <td v-for="(cell,c) in row" :key="c">{{cell}}</td>
       </tr>
@@ -26,13 +26,14 @@ export default {
         this.headers.forEach(h => row.push(x[h]));
         return row;
       });
-    // return []
+      // return []
     }
   },
   methods: {
-    handleRowClick(idx) {
-      console.dir(this.logs[idx]);
-    }
+    // @click="handleRowClick(r)""
+    // handleRowClick(idx) {
+    //   console.dir(this.logs[idx]);
+    // }
   }
 };
 </script>

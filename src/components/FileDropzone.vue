@@ -32,7 +32,6 @@ export default {
   methods: {
     ...mapActions(["importLogFile"]),
     loadTextFromFile(ev) {
-      console.dir(ev.target.files);
       const files = ev.target.files;
       for (var i = 0; i < files.length; i++) {
         this.commitFile(files[i]);
