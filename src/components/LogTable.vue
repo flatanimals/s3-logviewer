@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(row,r) in rows" :key="r">
+      <tr v-for="(row,r) in rows" :key="r" class="bg-white odd:bg-gray-100">
         <th>{{r+1}}</th>
         <td v-for="(cell,c) in row" :key="c">{{cell}}</td>
       </tr>

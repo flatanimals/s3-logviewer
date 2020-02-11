@@ -1,6 +1,6 @@
 const config = function () {
     return {
-        siteName: 's3://logviewer',
+        siteName: 's3://bucket/log/viewer',
         siteRepo: 'https://github.com/flatanimals/s3-logviewer',
         headers: [
             'bucket-owner',

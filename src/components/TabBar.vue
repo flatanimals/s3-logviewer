@@ -7,7 +7,7 @@
       :class="tabClasses(i)"
     >
       <span>{{filename}}</span>
-      <button @click.stop="handleTabCloseClick(i)">X</button>
+      <button @click.stop="handleTabCloseClick(i)">&times;</button>
     </div>
   </nav>
 </template>
@@ -44,9 +44,9 @@ export default {
   @apply flex;
   @apply flex-row;
   @apply px-3;
-  @apply pt-2;
+  @apply pt-1;
   @apply bg-teal-700;
-  @apply border-b;
+  @apply border-b-2;
   @apply border-t-2;
   @apply border-teal-900;
   @apply shadow-inner;
@@ -56,7 +56,7 @@ export default {
   @apply flex-row;
   @apply items-baseline;
   @apply mr-2;
-  @apply p-2;
+  @apply p-1;
   @apply font-thin;
   @apply text-center;
   @apply text-sm;
@@ -65,9 +65,11 @@ export default {
   @apply border-teal-900;
   @apply rounded-t;
   @apply cursor-pointer;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
 .tab.active {
+  @apply flex;
+  @apply items-baseline;
   @apply font-semibold;
   @apply text-teal-900;
   @apply bg-white;
@@ -76,12 +78,13 @@ export default {
 }
 .tab > button {
   @apply hidden;
-  @apply w-5 h-5;
-  @apply ml-2;
+  @apply w-4 h-4;
+  @apply ml-1;
   @apply font-semibold;
   @apply text-xs;
   @apply text-center;
   @apply text-white;
+  @apply leading-none;
   @apply bg-teal-700;
   @apply rounded-full;
   @apply opacity-25;

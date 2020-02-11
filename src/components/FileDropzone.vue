@@ -5,12 +5,11 @@
       multiple
       type="file"
       @change="loadTextFromFile"
-      title="Click to load log files"
+      title="Click to Select Files"
     />
     <div class="dropzone">
       <div class="dropzone-brand text-center">
         {{ config.siteName }}
-        <p class="text-sm">an opinionated s3 bucket log viewer</p>
       </div>
       <div class="dropzone-cta">
         <p class="text-2xl font-semibold">Drag &amp; Drop S3 Logs Here</p>

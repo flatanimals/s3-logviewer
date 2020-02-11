@@ -39,19 +39,18 @@ export default {
 .statusbar {
   @apply flex;
   @apply flex-row;
-  @apply px-2;
-  @apply pt-1;
-  @apply pb-2;
+  @apply p-1;
   @apply text-xs;
-  @apply bg-gray-100;
+  @apply bg-teal-800;
   @apply border-t;
   @apply border-gray-200;
+  @apply text-white;
 }
 .statusbar > div {
   @apply mr-1;
   @apply px-2;
-  @apply py-2;
+  @apply py-1;
   @apply shadow-inner;
-  @apply bg-gray-200;
+  @apply bg-teal-900;
 }
 </style>
