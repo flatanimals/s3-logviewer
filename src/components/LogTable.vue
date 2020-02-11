@@ -1,5 +1,5 @@
 <template>
-  <table>
+  <table class="log-table">
     <thead>
       <tr>
         <th>#</th>
@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(row,r) in rows" :key="r" class="bg-white even:bg-gray-100">
+      <tr v-for="(row,r) in rows" :key="r" class="even:bg-gray-100" v-on:dblclick="handleRowClick(r)">
         <th>{{r+1}}</th>
         <td v-for="(cell,c) in row" :key="c">{{cell}}</td>
       </tr>
@@ -30,28 +30,39 @@ export default {
     }
   },
   methods: {
-    // @click="handleRowClick(r)""
-    // handleRowClick(idx) {
-    //   console.dir(this.logs[idx]);
-    // }
+    handleRowClick(idx) {
+      this.$emit("selected", idx);
+    }
   }
 };
 </script>
 
 <style lang="postcss" scoped>
-thead tr {
+.log-table thead tr {
   @apply bg-gray-100;
 }
 
-tbody tr:hover {
+.log-table tbody tr {
+  @apply bg-white;
+  @apply cursor-pointer;
+}
+
+.log-table tbody tr:hover {
   @apply bg-orange-200;
 }
 
-th {
-  @apply p-1 border border-gray-300 whitespace-no-wrap text-xs;
+.log-table th {
+  @apply p-1;
+  @apply text-xs;
+  @apply whitespace-no-wrap;
+  @apply border;
+  @apply border-gray-300;
 }
 
-td {
-  @apply p-1 border whitespace-no-wrap text-xs;
+.log-table td {
+  @apply p-1;
+  @apply text-xs;
+  @apply whitespace-no-wrap;
+  @apply border;
 }
 </style>
