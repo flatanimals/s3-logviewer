@@ -1,5 +1,6 @@
 <template>
   <nav class="tab-bar">
+    <upload-tab class="tab"></upload-tab>
     <div
       v-for="(filename,i) in filenames"
       :key="filename"
@@ -13,11 +14,14 @@
 </template>
 
 <script>
+import UploadTab from "./UploadTab";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "tab-bar",
-
+  components: {
+      UploadTab
+  },
   computed: {
     ...mapGetters(["filenames", "selectedIndex"])
   },
@@ -43,7 +47,7 @@ export default {
 .tab-bar {
   @apply flex;
   @apply flex-row;
-  @apply px-3;
+  @apply px-1;
   @apply pt-1;
   @apply bg-teal-700;
   @apply border-b-2;
@@ -55,7 +59,8 @@ export default {
   @apply flex;
   @apply flex-row;
   @apply items-baseline;
-  @apply mr-2;
+  @apply relative;
+  @apply mr-1;
   @apply p-1;
   @apply font-thin;
   @apply text-center;
@@ -66,6 +71,9 @@ export default {
   @apply rounded-t;
   @apply cursor-pointer;
   margin-bottom: -2px;
+}
+.tab.add {
+  @apply px-3;
 }
 .tab.active {
   @apply flex;
