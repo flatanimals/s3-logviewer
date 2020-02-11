@@ -26,7 +26,7 @@ export default {
   @apply flex-grow;
   @apply font-light;
   @apply text-2xl;
-  @apply text-teal-900;
+  @apply text-orange-700;
   @apply px-3;
   @apply py-1;
 }
