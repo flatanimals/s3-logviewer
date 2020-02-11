@@ -9,6 +9,7 @@
     <footer class="statusbar">
       <div>{{(selectedLogFile.size/1000).toFixed(2)+"KB"}}</div>
       <div>{{selectedLogFile.logs.length}} Rows</div>
+      <div class="flex-grow"></div>
     </footer>
   </div>
 </template>
@@ -52,5 +53,8 @@ export default {
   @apply py-1;
   @apply shadow-inner;
   @apply bg-teal-900;
+}
+.statusbar > div:last-child {
+  @apply mr-0;
 }
 </style>
