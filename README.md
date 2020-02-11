@@ -1,24 +1,18 @@
-# s3log
+# s3-logviewer
 
-## Project setup
-```
+## setup
+```bash
+git clone git@github.com:flatanimals/s3-logviewer.git
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
+## run local
+```bash
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
+## build for deploy
+```bash
 yarn build
+# copy dist/ folder to your hosting environment
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
