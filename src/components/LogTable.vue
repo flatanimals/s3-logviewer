@@ -39,15 +39,15 @@ export default {
 
 <style lang="postcss" scoped>
 thead tr {
-  @apply bg-blue-100;
+  @apply bg-gray-100;
 }
 
 tbody tr:hover {
-  @apply bg-yellow-200;
+  @apply bg-orange-200;
 }
 
 th {
-  @apply p-1 border border-blue-300 whitespace-no-wrap text-xs;
+  @apply p-1 border border-gray-300 whitespace-no-wrap text-xs;
 }
 
 td {
